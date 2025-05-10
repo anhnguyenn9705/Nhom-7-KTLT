@@ -1,1 +1,12 @@
+#include <stdio.h>  
+#include <stdlib.h> 
+void tinhTich(int a[], int b[], int tich[], int bac1, int bac2) {
+    for (int i = 0; i <= bac1 + bac2; i++) tich[i] = 0;
+    for (int i = 0; i <= bac1; i++) {
+        for (int j = 0; j <= bac2; j++) {
+            tich[i + j] += a[i] * b[j];
+        }
+    }
+}
+
 

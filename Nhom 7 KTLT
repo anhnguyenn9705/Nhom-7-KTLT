@@ -1,1 +1,11 @@
-
+// Hàm nhân từng hạng tử giữa 2 đa thức
+void nhanTungHangTu(DaThuc a, DaThuc b, DaThuc *trungGian) {
+    trungGian->soLuong = 0;
+    for (int i = 0; i < a.soLuong; i++) {
+        for (int j = 0; j < b.soLuong; j++) {
+            trungGian->ds[trungGian->soLuong].heso = a.ds[i].heso * b.ds[j].heso;
+            trungGian->ds[trungGian->soLuong].bac = a.ds[i].bac + b.ds[j].bac;
+            trungGian->soLuong++;
+        }
+    }
+}
